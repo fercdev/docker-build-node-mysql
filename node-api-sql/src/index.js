@@ -57,6 +57,20 @@ async function startApi() {
         }
     });
 
+    // post - crear un nuevo usuario
+    app.post('/users', async (req, res) => {
+        try {
+            const { nombre, email } = req.body;
+            const user = await User.create({ nombre, email });
+            res.status(201).json(user);
+        } catch (error) {
+            console.error('Error al crear usuario:', error);
+            res.status(500).json({
+                error: error.message
+            })
+        }
+    });
+
 
     // iniciar el server
 
