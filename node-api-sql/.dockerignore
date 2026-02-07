@@ -1,0 +1,20 @@
+# dependencias
+node_modules
+
+#archivos de entorno
+.env
+.env.*
+
+#git
+.git
+.gitignore
+
+#ediotes
+.vscode
+.idea
+
+#builds o artifacts
+dist
+build
+.tmp
+.cache

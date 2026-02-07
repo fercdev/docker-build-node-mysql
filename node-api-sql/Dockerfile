@@ -1,0 +1,24 @@
+#etapa1 build
+
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm ci
+
+COPY . .
+
+#etapa2 runtime
+FROM node:20-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app /app
+
+ENV NODE_ENV=production
+
+EXPOSE 4000
+
+CMD [ "npm", "start" ]
