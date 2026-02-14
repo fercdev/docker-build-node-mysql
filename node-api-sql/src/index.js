@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// variables de entorno
+// variables de entorno para la conexión a la base de datos
 const DB_HOST = process.env.DB_HOST || 'localhost'; // depende del nombre del container
 const DB_NAME = process.env.DB_NAME || 'demo_db'; // nombre de la db
 const DB_USER = process.env.DB_USER || 'demo_user'; // usuario de la db
