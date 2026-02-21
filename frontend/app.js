@@ -1,4 +1,4 @@
-const API_URL = "http://backend:4000";
+const API_URL = "http://localhost:9093";
 
 async function cargarUsuarios() {
     const res = await fetch(`${API_URL}/users`);
