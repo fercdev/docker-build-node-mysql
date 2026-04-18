@@ -7,5 +7,11 @@ pipeline {
                 echo 'Hola desde Jenkins -- rama master!!!!'
             }
         }
+
+        stage('end') {
+            steps {
+                echo 'Finalizando desde Jenkins -- rama master!!!!'
+            }
+        }
     }
 }

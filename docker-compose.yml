@@ -1,7 +1,7 @@
 services:
   
   database:
-    image: mysql_application:latest
+    image: fercdevv/mysql_application:latest
     container_name: mysql_container
     restart: unless-stopped
 
@@ -23,7 +23,7 @@ services:
       start_period: 10s
 
   backend:
-    image: backend_application:latest
+    image: fercdevv/backend_application:latest
     container_name: backend_container
     restart: always
 
@@ -44,7 +44,7 @@ services:
         condition: service_healthy
   
   frontend:
-    image: frontend_application:latest
+    image: fercdevv/frontend_application:latest
     container_name: frontend_container
     restart: always
 
