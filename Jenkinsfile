@@ -6,6 +6,10 @@ pipeline {
         DOCKER_BACKEND_IMAGE = "${DOCKER_USER}/node-api-sql:latest"
         DOCKER_FRONTEND_IMAGE = "${DOCKER_USER}/frontend-html:latest"
     }
+
+    options {
+        timeout(time: 5, unit: 'MINUTES')
+    }
     
     stages {
         stage('build & push backend') {
